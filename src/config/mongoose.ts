@@ -17,4 +17,6 @@ export function connectMongodb() {
   db.once("open", () => {
     console.log("mongodb is connected");
   });
+
+  return db;
 }
