@@ -1,5 +1,6 @@
 import { LinkInterface } from "../types";
 import { Link } from "../classes";
+import { info_resolver } from "./query/info";
 
 const links = [
   new Link("link-0", "www.howtographql.com", "Fullstack tutorial for GraphQL"),
@@ -13,7 +14,7 @@ const links = [
 
 export const resolvers = {
   Query: {
-    info: () => "This is hackernews clone.",
+    info: info_resolver,
     feed: () => links,
   },
   Mutation: {
