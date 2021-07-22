@@ -1,15 +1,13 @@
 {
   "links": [
     {
-      "id": "link-0",
       "url": "www.howtographql.com",
       "description": "Fullstack tutorial for GraphQL"
     },
     {
-      "id": "linker-1",
       "url": "www.linkernetwork.com",
       "description": "Linker networks is an AI company."
     },
-    { "id": "linker-2", "url": "www.random.com", "description": "random~~~" }
+    { "url": "www.random.com", "description": "random~~~" }
   ]
 }

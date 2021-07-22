@@ -1,5 +1,5 @@
 export interface IdInterface {
-  id: string;
+  _id: string;
 }
 export interface LinkInterface {
   url: string;
