@@ -7,6 +7,7 @@ export function connectMongodb() {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
+  mongoose.set("useCreateIndex", true);
 
   const db = mongoose.connection;
 
