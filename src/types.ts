@@ -1,4 +1,4 @@
-export interface Id {
+export interface IdInterface {
   id: string;
 }
 export interface LinkInterface {
