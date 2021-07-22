@@ -1,0 +1,25 @@
+# system
+*/lib
+*.log
+
+# database
+*/db
+
+# python
+__pycache__/
+server-python/output
+.env
+
+# misc
+.vscode
+.swp
+.png
+.swo
+.DS_Store
+node_modules
+
+# for build
+server/version.json
+
+# jest
+__coverage__/
