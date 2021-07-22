@@ -1,6 +1,7 @@
 import { LinkInterface } from "../types";
 import { Link } from "../classes";
 import { info_resolver } from "./query/info";
+import { feed_resolver } from "./query/feed";
 
 const links = [
   new Link("link-0", "www.howtographql.com", "Fullstack tutorial for GraphQL"),
@@ -15,7 +16,7 @@ const links = [
 export const resolvers = {
   Query: {
     info: info_resolver,
-    feed: () => links,
+    feed: feed_resolver,
   },
   Mutation: {
     post: (_: void, args: LinkInterface): Link => {
@@ -27,7 +28,7 @@ export const resolvers = {
   Link: {
     // Link type from Link class!
     // simple resolvers can be omitted.
-    id: (link: Link) => link.id,
+    _id: (link: Link) => link._id,
     url: (link: Link) => link.url,
     description: (link: Link) => link.description,
   },

@@ -1,10 +1,7 @@
 import { Schema, model } from "mongoose";
-import { LinkInterface, IdInterface } from "../types";
+import { link_id_interface } from "../types";
 
-type link = LinkInterface & IdInterface;
-
-const linkSchema = new Schema<link>({
-  id: { type: String, required: true, index: true },
+const linkSchema = new Schema<link_id_interface>({
   url: { type: String, require: true },
   description: { type: String, require: true },
 });
