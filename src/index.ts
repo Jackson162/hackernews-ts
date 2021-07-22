@@ -3,6 +3,8 @@ import * as path from "path";
 import { ApolloServer } from "apollo-server";
 import { LinkInterface } from "./types";
 import { Link } from "./classes";
+import { importMongooseConfig } from "./config/mongoose";
+importMongooseConfig();
 
 const links = [
   new Link("link-0", "www.howtographql.com", "Fullstack tutorial for GraphQL"),
