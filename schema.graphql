@@ -5,7 +5,7 @@ type Query {
 
 type Mutation {
   create_link(url: String!, description: String!): Link
-  update_link(_id: String!): Link
+  update_link(_id: String!, url: String!, description: String!): Link
 }
 
 type Link {

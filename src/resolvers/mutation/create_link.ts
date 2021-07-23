@@ -8,12 +8,9 @@ export const create_link_resolver = async (
   { url, description }: LinkInterface
 ): Promise<Link> => {
   let new_link = await LinkModel.create({ url, description }).catch(
-    (err: Error) => {
-      return err;
-    }
+    (err: Error) => err
   );
 
-  console.log(new_link);
   // reassign type? static => no?
   new_link = new Link(new_link._id, new_link.url, new_link.description);
   // console.log(new_link);
