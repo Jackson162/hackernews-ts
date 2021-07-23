@@ -2,6 +2,7 @@ import { LinkInterface } from "../types";
 import { Link } from "../classes";
 import { info_resolver } from "./query/info";
 import { feed_resolver } from "./query/feed";
+import { _id_resolver, url_resolver, description_resolver } from "./link/link";
 
 const links = [
   new Link("link-0", "www.howtographql.com", "Fullstack tutorial for GraphQL"),
@@ -28,8 +29,8 @@ export const resolvers = {
   Link: {
     // Link type from Link class!
     // simple resolvers can be omitted.
-    _id: (link: Link) => link._id,
-    url: (link: Link) => link.url,
-    description: (link: Link) => link.description,
+    _id: _id_resolver,
+    url: url_resolver,
+    description: description_resolver,
   },
 };
