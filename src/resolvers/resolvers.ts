@@ -1,30 +1,14 @@
-import { LinkInterface } from "../types";
-import { Link } from "../classes";
 import { info_resolver } from "./query/info";
 import { feed_resolver } from "./query/feed";
 import { _id_resolver, url_resolver, description_resolver } from "./link/link";
-
-const links = [
-  new Link("link-0", "www.howtographql.com", "Fullstack tutorial for GraphQL"),
-  new Link(
-    "linker-1",
-    "www.linkernetwork.com",
-    "Linker networks is an AI company."
-  ),
-  new Link("linker-2", "www.random.com", "random~~~"),
-];
-
+import { create_link_resolver } from "./mutation/create_link";
 export const resolvers = {
   Query: {
     info: info_resolver,
     feed: feed_resolver,
   },
   Mutation: {
-    post: (_: void, args: LinkInterface): Link => {
-      const link = new Link(`link-${links.length}`, args.url, args.description);
-      links.push(link);
-      return link;
-    },
+    create_link: create_link_resolver,
   },
   Link: {
     // Link type from Link class!
