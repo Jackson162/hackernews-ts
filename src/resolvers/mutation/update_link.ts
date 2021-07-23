@@ -18,7 +18,7 @@ export const update_link_resolver = async <T extends link_id_interface>(
 
   link = Object.assign(link, updated_fields);
 
-  let updated_link = await link.save();
+  let updated_link = await link.save().catch((err: Error) => err);
 
   updated_link = new Link(
     updated_link._id,

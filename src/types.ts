@@ -7,3 +7,8 @@ export interface LinkInterface {
 }
 
 export type link_id_interface = LinkInterface & IdInterface;
+
+export interface stateInterface {
+  state: boolean;
+  message: string;
+}

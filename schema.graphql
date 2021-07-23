@@ -6,10 +6,16 @@ type Query {
 type Mutation {
   create_link(url: String!, description: String!): Link
   update_link(_id: String!, url: String!, description: String!): Link
+  delete_link(_id: String!): State
 }
 
 type Link {
   _id: ID!
   description: String!
   url: String!
+}
+
+type State {
+  state: Boolean!
+  message: String!
 }
