@@ -6,4 +6,4 @@ const linkSchema = new Schema<link_id_interface>({
   description: { type: String, require: true },
 });
 
-export const LinkModel = model<link_id_interface>("Link", linkSchema);
+export const LinkModel = model("Link", linkSchema);
